@@ -5,16 +5,19 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     public Transform playerCamera;
     public CharacterController character;
-    public float sensitivity;
+    public Transform head;
+    public float sensitivity = 400f;
     private float xRotate = 0f;
     public bool mouseLock = true;
-    public float speed = 1f;
-    public float gravity = -9.81f;
+    public float speed = 0.2f;
+    public float gravity = -20f;
     public float yVelocity = 0f;
     public bool grounded;
     public Transform feet;
     public LayerMask ground;
-    public float jump = 5f;
+    public bool sprintToggle = false;
+    public KeyCode togglePerspective = KeyCode.Space;
+
 
     void Start()
     {
@@ -26,11 +29,7 @@ public class Move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        yVelocity += gravity * Time.deltaTime;
-        if (checkGrounded())
-        {
-            yVelocity = 0;
-        }
+        
     }
 
     // Update is called once per frame
@@ -38,14 +37,28 @@ public class Move : MonoBehaviour
     {
         UpdateMouseMove();
         UpdatePlayerWalk();
-        
 
-        if (grounded && Input.GetKeyDown(KeyCode.Space)) {
-            yVelocity = jump;
+
+        if (Input.GetKeyDown(togglePerspective)) {
+            playerCamera.transform.localPosition = new Vector3(0, 0, -5);
+        }
+        if (Input.GetKeyUp(togglePerspective)) {
+            playerCamera.transform.localPosition = new Vector3(0,0,0);
         }
 
+        if (sprintToggle && (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))) {
+            sprintToggle = false;
+            speed /= 2;
+        }
+
+        yVelocity += gravity * Time.deltaTime;
+        if (checkGrounded())
+        {
+            yVelocity = 0;
+        }
+        
         character.Move(Vector3.up * yVelocity * Time.deltaTime);
-         
+
     }
 
     void UpdateMouseMove() {
@@ -55,7 +68,7 @@ public class Move : MonoBehaviour
         xRotate = Mathf.Clamp(xRotate, -90f, 90f);
 
         this.transform.Rotate(Vector3.up * mouse.x);
-        playerCamera.transform.localEulerAngles = new Vector3(xRotate, 0f, 0f);
+        head.transform.localEulerAngles = new Vector3(xRotate, 0f, 0f);
     }
 
     bool checkGrounded() {

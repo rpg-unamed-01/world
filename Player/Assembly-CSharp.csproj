@@ -64,6 +64,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\1. Character &amp; NPC Controller\Scripts\HeroController.cs" />
+    <Compile Include="Assets\1. Character &amp; NPC Controller\Scripts\NPCController.cs" />
+    <Compile Include="Assets\1. Character &amp; NPC Controller\Scripts\Waypoint.cs" />
     <Compile Include="Assets\Common\Scripts\MouseManager.cs" />
     <Compile Include="Assets\Common\Scripts\SmoothFollowTarget.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_BrushMirror.cs" />
