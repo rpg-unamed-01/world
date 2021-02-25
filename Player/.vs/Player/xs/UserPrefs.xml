@@ -1,17 +1,22 @@
 ﻿<Properties StartupConfiguration="{D55E595C-D8AC-B8C1-F1BC-BCC3B1DCE059}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Move.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Walk.cs">
     <Files>
-      <File FileName="Assets/Scripts/Move.cs" Line="17" Column="26" />
+      <File FileName="Assets/Scripts/Move.cs" Line="9" Column="27" />
+      <File FileName="Assets/Scripts/Shoot.cs" />
+      <File FileName="Assets/Scripts/Grenade.cs" />
+      <File FileName="Assets/Walk.cs" Line="8" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Player" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="ProCore" expanded="True" />
-              <Node name="Scripts" expanded="True">
-                <Node name="Move.cs" selected="True" />
+              <Node name="Jammo-Character" expanded="True">
+                <Node name="Scripts" expanded="True" />
               </Node>
+              <Node name="ProCore" expanded="True" />
+              <Node name="Scripts" expanded="True" />
+              <Node name="Walk.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -20,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9bf51995-fe09-4ce6-ae50-96d7c68aa417" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d8a3c269-f217-479f-9558-307d0c5d189e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

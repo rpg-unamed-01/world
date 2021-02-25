@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8747274809925290051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: road_chunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,6 +108,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: boundary_wall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
@@ -409,6 +414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &8669068225384802565 stripped
@@ -483,6 +493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: boundary_wall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
@@ -559,6 +574,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &1255376314698662608 stripped
@@ -633,6 +653,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: boundary_wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
@@ -709,6 +734,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &1779306093692649532 stripped
@@ -784,6 +814,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &3314565067736602725 stripped
@@ -858,6 +893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: boundary_wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}

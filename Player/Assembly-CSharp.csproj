@@ -69,6 +69,8 @@
     <Compile Include="Assets\1. Character &amp; NPC Controller\Scripts\Waypoint.cs" />
     <Compile Include="Assets\Common\Scripts\MouseManager.cs" />
     <Compile Include="Assets\Common\Scripts\SmoothFollowTarget.cs" />
+    <Compile Include="Assets\Jammo-Character\Scripts\CharacterSkinController.cs" />
+    <Compile Include="Assets\Jammo-Character\Scripts\MovementInput.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_BrushMirror.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_ComponentIndex.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_Culling.cs" />
@@ -97,7 +99,10 @@
     <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_MeshUtility.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_Util.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Scripts\Utility\z_Vector.cs" />
+    <Compile Include="Assets\Scripts\Grenade.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
+    <Compile Include="Assets\Scripts\Shoot.cs" />
+    <Compile Include="Assets\Walk.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -143,6 +148,8 @@
     <Compile Include="Assets\postprocessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\postprocessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <None Include="Assets\crosshairpack_kenney\Size.txt" />
+    <None Include="Assets\crosshairpack_kenney\License.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

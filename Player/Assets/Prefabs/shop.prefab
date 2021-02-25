@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9219101274893488512}
   - component: {fileID: 9219101274405231657}
   - component: {fileID: 9219101274405231663}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Prop_MallSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 9219101274893488514}
   - component: {fileID: 9219101274572224241}
   - component: {fileID: 9219101274572224247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Carpark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 9219101274891719524}
   - component: {fileID: 9219101274894619460}
   - component: {fileID: 9219101274893488516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,6 +332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence_long_mesh (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -394,6 +398,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_Name
       value: fence_long_mesh (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_RootOrder
@@ -514,6 +522,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &4079303741758137504 stripped
@@ -532,6 +545,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_Name
       value: fence_long_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_RootOrder
@@ -595,6 +612,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_Name
       value: fence_long_mesh (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_RootOrder
@@ -715,6 +736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &4079303742218399960 stripped
@@ -789,6 +815,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: boundary_wall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
@@ -865,6 +896,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &4079303740486503076 stripped
@@ -940,6 +976,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &4079303740485593142 stripped
@@ -958,6 +999,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_Name
       value: fence_long_mesh (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_RootOrder
@@ -1078,6 +1123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &4079303740592358431 stripped
@@ -1152,6 +1202,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: boundary_wall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
@@ -1228,6 +1283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &4079303740926771912 stripped
@@ -1246,6 +1306,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_Name
       value: fence_long_mesh (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_RootOrder
@@ -1309,6 +1373,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_Name
       value: fence_long_mesh (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
       propertyPath: m_RootOrder
@@ -1429,6 +1497,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &4079303741283645554 stripped
@@ -1504,6 +1577,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boundary_wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
 --- !u!4 &4079303741119965187 stripped
@@ -1578,6 +1656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: boundary_wall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904345758862635697, guid: 61d0da5220e7542fe8e892001c76cbda,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d0da5220e7542fe8e892001c76cbda, type: 3}
