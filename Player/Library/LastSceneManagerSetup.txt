@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/rpg_spawn.unity
+- path: Assets/_Scenes/rpg_spawn.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -1,21 +1,18 @@
 ﻿<Properties StartupConfiguration="{D55E595C-D8AC-B8C1-F1BC-BCC3B1DCE059}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Walk.cs">
     <Files>
-      <File FileName="Assets/Scripts/Move.cs" Line="9" Column="27" />
-      <File FileName="Assets/Scripts/Shoot.cs" />
-      <File FileName="Assets/Scripts/Grenade.cs" />
-      <File FileName="Assets/Walk.cs" Line="8" Column="21" />
+      <File FileName="Assets/Walk.cs" Line="33" Column="39" />
+      <File FileName="Assets/_Scripts/Move.cs" Line="68" Column="13" />
+      <File FileName="Assets/_Scripts/InputController.cs" Line="36" Column="22" />
+      <File FileName="Assets/_Scripts/Shoot.cs" Line="19" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Player" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Jammo-Character" expanded="True">
-                <Node name="Scripts" expanded="True" />
-              </Node>
-              <Node name="ProCore" expanded="True" />
-              <Node name="Scripts" expanded="True" />
+              <Node name="_Scripts" expanded="True" />
+              <Node name="Jammo-Character" expanded="True" />
               <Node name="Walk.cs" selected="True" />
             </Node>
           </Node>
@@ -25,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d8a3c269-f217-479f-9558-307d0c5d189e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="44ca1655-1927-4be5-a3e2-5ddd010b4a77" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
