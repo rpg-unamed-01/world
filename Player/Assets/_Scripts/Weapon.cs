@@ -3,7 +3,7 @@
 public class Weapon : MonoBehaviour
 {
     public bool melee;
-    public bool damage;
+    public float damage;
     public float knockback;
     public float range;
     public float fireRatePerFrame;

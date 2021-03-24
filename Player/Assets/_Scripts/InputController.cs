@@ -51,7 +51,7 @@ public class InputController : MonoBehaviour
         xRotate = Mathf.Clamp(xRotate, -90f, 90f);
 
         
-        camera.transform.localEulerAngles = new Vector3(xRotate, 0f, 0f);
+        head.transform.localEulerAngles = new Vector3(xRotate, 0f, 0f);
         head.Rotate(Vector3.up * mouse.x);
     }
 
