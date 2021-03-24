@@ -2030,6 +2030,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1761848979}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &338076595 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1496095858350994242, guid: 82dd092b5793e4489a93e01fd7810da1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1646556455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &349277039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4840,6 +4846,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d80c7433031fdee44bf3910c4b046ce7, type: 3}
+--- !u!1 &733685775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1496095858782544009, guid: 82dd092b5793e4489a93e01fd7810da1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1646556455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &733685779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733685775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6726e6b5c7a4701bab82c8778a6e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenade: {fileID: 1654043540676332891, guid: a37a6ca4f4d104dcd8282948abdfb220, type: 3}
+  camera: {fileID: 338076595}
+  weapons: []
+  cooldown: 1
 --- !u!1001 &738844378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12909,6 +12937,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1496095858350994242, guid: 82dd092b5793e4489a93e01fd7810da1,
+        type: 3}
+      propertyPath: field of view
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496095858350994242, guid: 82dd092b5793e4489a93e01fd7810da1,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496095858350994242, guid: 82dd092b5793e4489a93e01fd7810da1,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1335
+      objectReference: {fileID: 0}
     - target: {fileID: 1496095858782544009, guid: 82dd092b5793e4489a93e01fd7810da1,
         type: 3}
       propertyPath: m_Name

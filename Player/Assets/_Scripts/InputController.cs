@@ -8,18 +8,23 @@ public class InputController : MonoBehaviour
     public float sprintSpeed;
     public float airSpeed;
     public float sensitivity;
+    public float jumpForce;
 
     public KeyCode sprint;
     public KeyCode perspective;
+    public KeyCode jump;
 
 
     public Rigidbody rb;
     public Camera camera;
     public Camera perspectiveCamera;
     public Transform head;
+    public Transform feet;
+    public LayerMask ground;
 
     private float xRotate = 0f;
     private bool toggleSprint = false;
+    public bool grounded = true;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +36,8 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        CheckGrounded();
+        Jump();
         TogglePerspective();
         LookAround();
         MoveAround();
@@ -61,6 +68,10 @@ public class InputController : MonoBehaviour
         Vector3 move;
         move = head.forward * Input.GetAxis("Vertical") + head.right * Input.GetAxis("Horizontal");
         move = move.normalized * walkSpeed * Time.fixedDeltaTime;
+        if (!grounded)
+        {
+            move *= airSpeed;
+        }
         if (toggleSprint) {
             move *= sprintSpeed/walkSpeed;
         }
@@ -76,6 +87,23 @@ public class InputController : MonoBehaviour
         else {
             camera.enabled = true;
             perspectiveCamera.enabled = false;
+        }
+    }
+
+    private void CheckGrounded() {
+        if (Physics.OverlapSphere(feet.position, feet.localScale.x, ground).Length > 0)
+        {
+            grounded = true;
+        }
+        else {
+            grounded = false;
+        }
+    }
+
+    private void Jump() {
+        if (grounded && Input.GetKeyDown(jump)) {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+            grounded = false;
         }
     }
 }

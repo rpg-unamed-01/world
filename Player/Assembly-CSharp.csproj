@@ -105,6 +105,7 @@
     <Compile Include="Assets\_Scripts\InputController.cs" />
     <Compile Include="Assets\_Scripts\Move.cs" />
     <Compile Include="Assets\_Scripts\Shoot.cs" />
+    <Compile Include="Assets\_Scripts\Weapon.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Attributes\TrackballAttribute.cs" />
