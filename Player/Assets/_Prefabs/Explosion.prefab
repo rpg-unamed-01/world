@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12a00503d2ad437681584850665363e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
+  force: 5
   player: {fileID: 1496095858782544009, guid: 82dd092b5793e4489a93e01fd7810da1, type: 3}
 --- !u!135 &7901381914162947769
 SphereCollider:

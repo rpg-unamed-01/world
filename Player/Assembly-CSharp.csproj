@@ -156,6 +156,7 @@
     <Compile Include="Assets\postprocessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <None Include="Assets\crosshairpack_kenney\Size.txt" />
     <None Include="Assets\crosshairpack_kenney\License.txt" />
+    <None Include="Assets\NavMeshComponents-2019.4\ProjectSettings\ProjectVersion.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -742,7 +743,24 @@
       <HintPath>/Users/timofey/Documents/GitHub/world/Player/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="NavMeshComponentsExamplesEditor.csproj">
+      <Project>{870AC160-E0DF-E766-BF8A-F4EF60F927AC}</Project>
+      <Name>NavMeshComponentsExamplesEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{72013E9C-AF73-ED8D-3C09-50F222215613}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{4683CCD7-BF09-8A21-2DA1-CDB8966584DA}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsExamples.csproj">
+      <Project>{D7B559B7-AA57-942A-4D18-89767FCBFD96}</Project>
+      <Name>NavMeshComponentsExamples</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

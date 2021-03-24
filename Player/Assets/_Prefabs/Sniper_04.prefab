@@ -562,6 +562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4944291180234768}
+  - component: {fileID: -562055811373964695}
   m_Layer: 0
   m_Name: Sniper_04
   m_TagString: Untagged
@@ -594,6 +595,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-562055811373964695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481417426184300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f8572eeb88a4ca5ba6cc015330c53b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  melee: 0
+  damage: 50
+  knockback: 5
+  range: 30
+  fireRatePerFrame: 10
+  totalAmmo: 150
+  magazineAmmo: 25
+  currentAmmo: 25
+  enemy:
+    serializedVersion: 2
+    m_Bits: 2048
+  xPos: 0.4
+  yPos: -0.3
+  zPos: 0.5
+  xRotate: 0
+  yRotate: 0
+  zRotate: 0
+  xScale: 1
+  yScale: 1
+  zScale: 1
 --- !u!1 &1626593391120148
 GameObject:
   m_ObjectHideFlags: 0

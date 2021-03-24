@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{D55E595C-D8AC-B8C1-F1BC-BCC3B1DCE059}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/Explosion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/Shoot.cs">
     <Files>
-      <File FileName="Assets/Walk.cs" Line="33" Column="39" />
-      <File FileName="Assets/_Scripts/Move.cs" />
-      <File FileName="Assets/_Scripts/InputController.cs" />
-      <File FileName="Assets/_Scripts/Shoot.cs" Line="23" Column="1" />
-      <File FileName="Assets/_Scripts/Weapon.cs" Line="32" Column="2" />
-      <File FileName="Assets/_Scripts/Grenade.cs" Line="19" Column="34" />
-      <File FileName="Assets/_Scripts/Explosion.cs" Line="1" Column="1" />
+      <File FileName="Assets/Walk.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/Move.cs" Line="68" Column="13" />
+      <File FileName="Assets/_Scripts/InputController.cs" Line="56" Column="6" />
+      <File FileName="Assets/_Scripts/Shoot.cs" Line="18" Column="80" />
+      <File FileName="Assets/_Scripts/Weapon.cs" Line="41" Column="30" />
+      <File FileName="Assets/_Scripts/Grenade.cs" Line="36" Column="6" />
+      <File FileName="Assets/_Scripts/Explosion.cs" Line="14" Column="1" />
+      <File FileName="Assets/_Scripts/Enemy.cs" Line="10" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,9 +16,17 @@
           <Node name="Player" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="_Scripts" expanded="True">
-                <Node name="Explosion.cs" selected="True" />
+                <Node name="Shoot.cs" selected="True" />
               </Node>
-              <Node name="Jammo-Character" expanded="True" />
+              <Node name="ProCore" expanded="True">
+                <Node name="Polybrush" expanded="True">
+                  <Node name="Code" expanded="True">
+                    <Node name="Editor" expanded="True">
+                      <Node name="Utility" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>

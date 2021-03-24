@@ -94,13 +94,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   melee: 1
   damage: 10
-  knockback: 2
+  knockback: 10
   range: 3
   fireRatePerFrame: 5
   totalAmmo: 1
   magazineAmmo: 1
   currentAmmo: 1
-  head: {fileID: 0}
   enemy:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
+  xPos: 0.5
+  yPos: -0.3
+  zPos: 0.5
+  xRotate: 50
+  yRotate: 0
+  zRotate: 30
+  xScale: 1
+  yScale: 1
+  zScale: 1

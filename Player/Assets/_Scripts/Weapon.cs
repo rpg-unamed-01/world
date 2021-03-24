@@ -11,25 +11,48 @@ public class Weapon : MonoBehaviour
     public float magazineAmmo;
     public float currentAmmo;
 
-    public Transform head;
     public LayerMask enemy;
 
+    public float xPos, yPos, zPos;
+    public float xRotate, yRotate, zRotate;
+    public float xScale = 1, yScale = 1 , zScale = 1;
+
+    private Transform camera;
     private float coolDown;
 
-    public void Shoot() {
+    private void Awake()
+    {
+        camera = transform.parent;
+        SetTransform();
+        gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        Shoot();
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Reload();
+        }
+    }
+
+    private void Shoot() {
         if (coolDown <= 0)
         {
             coolDown = 0;
-            if (currentAmmo > 0)
+            if (Input.GetMouseButtonDown(0))
             {
-                currentAmmo--;
-                RaycastHit hit;
-                if (Physics.Raycast(head.position, head.forward, out hit, range, enemy))
+                if (currentAmmo > 0 || melee)
                 {
-                    coolDown = fireRatePerFrame;
-                    hit.collider.attachedRigidbody.AddForce(head.forward * knockback, ForceMode.VelocityChange);
-                    if (hit.collider.tag == "Enemy") {
-                        //Put Enemy Script Call here to add damage.
+                    currentAmmo--;
+                    Debug.Log("hey");
+                    RaycastHit hit;
+                    if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, enemy))
+                    {
+                        Debug.Log(hit.transform.name);
+                        coolDown = fireRatePerFrame;
+                        hit.collider.attachedRigidbody.AddForce(camera.transform.forward * knockback, ForceMode.VelocityChange);
+                        hit.transform.gameObject.GetComponent<Enemy>().TakeDamage(damage);
                     }
                 }
             }
@@ -39,7 +62,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void Reload() {
+    private void Reload() {
         if (!melee)
         {
             float drawAmmo = magazineAmmo - currentAmmo;
@@ -54,5 +77,11 @@ public class Weapon : MonoBehaviour
                 totalAmmo -= drawAmmo;
             }
         }
+    }
+
+    private void SetTransform() {
+        transform.localPosition = new Vector3(xPos,yPos,zPos);
+        transform.localRotation = Quaternion.Euler(xRotate, yRotate, zRotate);
+        transform.localScale = new Vector3(xScale, yScale, zScale);
     }
 }
