@@ -62,6 +62,7 @@
      <Compile Include="Assets\Common\Scripts\SmoothFollowTarget.cs" />
      <Compile Include="Assets\Jammo-Character\Scripts\CharacterSkinController.cs" />
      <Compile Include="Assets\Jammo-Character\Scripts\MovementInput.cs" />
+     <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_BrushMirror.cs" />
      <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_ComponentIndex.cs" />
      <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_Culling.cs" />
@@ -97,6 +98,7 @@
      <Compile Include="Assets\_Scripts\InputController.cs" />
      <Compile Include="Assets\_Scripts\Move.cs" />
      <Compile Include="Assets\_Scripts\Shoot.cs" />
+     <Compile Include="Assets\_Scripts\SwitchScene.cs" />
      <Compile Include="Assets\postprocessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\postprocessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\postprocessing\Runtime\Attributes\TrackballAttribute.cs" />
