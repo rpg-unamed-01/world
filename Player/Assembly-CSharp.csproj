@@ -67,11 +67,11 @@
     <Compile Include="Assets\1. Character &amp; NPC Controller\Scripts\HeroController.cs" />
     <Compile Include="Assets\1. Character &amp; NPC Controller\Scripts\NPCController.cs" />
     <Compile Include="Assets\1. Character &amp; NPC Controller\Scripts\Waypoint.cs" />
+    <Compile Include="Assets\BlockyCustomCharacter\DemoAnimationScript.cs" />
     <Compile Include="Assets\Common\Scripts\MouseManager.cs" />
     <Compile Include="Assets\Common\Scripts\SmoothFollowTarget.cs" />
     <Compile Include="Assets\Jammo-Character\Scripts\CharacterSkinController.cs" />
     <Compile Include="Assets\Jammo-Character\Scripts\MovementInput.cs" />
-    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_BrushMirror.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_ComponentIndex.cs" />
     <Compile Include="Assets\ProCore\Polybrush\Code\Enum\z_Culling.cs" />
@@ -105,10 +105,14 @@
     <Compile Include="Assets\_Scripts\Explosion.cs" />
     <Compile Include="Assets\_Scripts\Grenade.cs" />
     <Compile Include="Assets\_Scripts\InputController.cs" />
+    <Compile Include="Assets\_Scripts\LoadPlayer.cs" />
+    <Compile Include="Assets\_Scripts\MainMenu.cs" />
     <Compile Include="Assets\_Scripts\Move.cs" />
+    <Compile Include="Assets\_Scripts\PlayerSelect.cs" />
     <Compile Include="Assets\_Scripts\Shoot.cs" />
     <Compile Include="Assets\_Scripts\SwitchScene.cs" />
     <Compile Include="Assets\_Scripts\Weapon.cs" />
+    <Compile Include="Assets\_Scripts\WeaponSelect.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\postprocessing\Runtime\Attributes\TrackballAttribute.cs" />
