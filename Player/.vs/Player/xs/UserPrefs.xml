@@ -1,14 +1,17 @@
 ﻿<Properties StartupConfiguration="{D55E595C-D8AC-B8C1-F1BC-BCC3B1DCE059}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/Shoot.cs">
+  <MonoDevelop.Ide.ItemProperties.NavMeshComponents PreferredExecutionTarget="1b33d58e-3e28-42ce-bb43-5d84e3227948" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/PlayerSelect.cs">
     <Files>
-      <File FileName="Assets/Walk.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/Move.cs" Line="68" Column="13" />
-      <File FileName="Assets/_Scripts/InputController.cs" Line="56" Column="6" />
-      <File FileName="Assets/_Scripts/Shoot.cs" Line="18" Column="80" />
-      <File FileName="Assets/_Scripts/Weapon.cs" Line="41" Column="30" />
-      <File FileName="Assets/_Scripts/Grenade.cs" Line="36" Column="6" />
-      <File FileName="Assets/_Scripts/Explosion.cs" Line="14" Column="1" />
+      <File FileName="Assets/Walk.cs" Line="3" Column="1" />
+      <File FileName="Assets/_Scripts/Move.cs" />
+      <File FileName="Assets/_Scripts/InputController.cs" Line="49" Column="6" />
+      <File FileName="Assets/_Scripts/Shoot.cs" Line="50" Column="10" />
+      <File FileName="Assets/_Scripts/Weapon.cs" />
+      <File FileName="Assets/_Scripts/Grenade.cs" Line="20" Column="32" />
+      <File FileName="Assets/_Scripts/Explosion.cs" Line="20" Column="86" />
       <File FileName="Assets/_Scripts/Enemy.cs" Line="10" Column="6" />
+      <File FileName="Assets/_Scripts/SwitchScene.cs" Line="8" Column="6" />
+      <File FileName="Assets/_Scripts/PlayerSelect.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,16 +19,7 @@
           <Node name="Player" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="_Scripts" expanded="True">
-                <Node name="Shoot.cs" selected="True" />
-              </Node>
-              <Node name="ProCore" expanded="True">
-                <Node name="Polybrush" expanded="True">
-                  <Node name="Code" expanded="True">
-                    <Node name="Editor" expanded="True">
-                      <Node name="Utility" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
+                <Node name="PlayerSelect.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -35,7 +29,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1b33d58e-3e28-42ce-bb43-5d84e3227948" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a5d5ca71-6636-44db-ae81-c7e7c7a0e3b7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

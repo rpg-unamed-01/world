@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12a00503d2ad437681584850665363e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 5
   player: {fileID: 1496095858782544009, guid: 82dd092b5793e4489a93e01fd7810da1, type: 3}
+  force: 10
 --- !u!135 &7901381914162947769
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c8b1d3b14f1d14ff9af8876f4d235839, type: 2}
+  - {fileID: 2100000, guid: 277b11a025b3740c9bd5073d1040adeb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

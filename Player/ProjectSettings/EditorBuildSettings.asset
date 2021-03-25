@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/rpg_spawn.unity
     guid: 2cbb886e664b64666a98bd74b4e87aff
+  - enabled: 1
+    path: Assets/_Scenes/Level1.unity
+    guid: 116153db307d2d04c9e19ed768ca7e74
   m_configObjects: {}

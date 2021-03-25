@@ -40,11 +40,19 @@ public class Shoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             currentWeapon = 0;
             weapons[1].SetActive(false);
+            weapons[2].SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             currentWeapon = 1;
             weapons[0].SetActive(false);
+            weapons[2].SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentWeapon = 2;
+            weapons[0].SetActive(false);
+            weapons[1].SetActive(false);
         }
         weapons[currentWeapon].SetActive(true);
     }
