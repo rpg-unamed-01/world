@@ -22,7 +22,7 @@ public class Weapon : MonoBehaviour
 
     private void Awake()
     {
-        camera = transform.parent;
+        camera = transform.parent.transform.parent;
         SetTransform();
         gameObject.SetActive(false);
     }

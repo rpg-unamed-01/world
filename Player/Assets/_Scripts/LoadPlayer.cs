@@ -19,9 +19,8 @@ public class LoadPlayer : MonoBehaviour
         clone.transform.Rotate(0f,-90f,0f);
 
         //Spawn chosen weapon into position
-        int selectedWeapon = PlayerPrefs.GetInt("selectedWeapon");
-        GameObject prefab1 = playerPrefabs[selectedWeapon];
+        GameObject prefab1 = weaponPrefabs[selectedPlayer];
         var clone1 = GameObject.Instantiate(prefab1, spawn.position, Quaternion.identity);
-        clone1.transform.parent = GameObject.Find("Player/Head").transform;
+        clone1.transform.parent = GameObject.Find("Player/Head/MainCamera/Weapon").transform;
     }
 }

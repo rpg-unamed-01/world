@@ -17,7 +17,7 @@ public class Walk : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            if (Move.sprintToggle)
+            if (true)
             {
                 anim.SetTrigger("a_Running");
                 anim.ResetTrigger("a_Idle");

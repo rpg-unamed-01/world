@@ -1,17 +1,19 @@
 ﻿<Properties StartupConfiguration="{D55E595C-D8AC-B8C1-F1BC-BCC3B1DCE059}|">
   <MonoDevelop.Ide.ItemProperties.NavMeshComponents PreferredExecutionTarget="1b33d58e-3e28-42ce-bb43-5d84e3227948" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/PlayerSelect.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/LoadPlayer.cs">
     <Files>
       <File FileName="Assets/Walk.cs" Line="3" Column="1" />
-      <File FileName="Assets/_Scripts/Move.cs" />
-      <File FileName="Assets/_Scripts/InputController.cs" Line="49" Column="6" />
-      <File FileName="Assets/_Scripts/Shoot.cs" Line="50" Column="10" />
+      <File FileName="Assets/_Scripts/InputController.cs" />
+      <File FileName="Assets/_Scripts/Shoot.cs" />
       <File FileName="Assets/_Scripts/Weapon.cs" />
-      <File FileName="Assets/_Scripts/Grenade.cs" Line="20" Column="32" />
-      <File FileName="Assets/_Scripts/Explosion.cs" Line="20" Column="86" />
-      <File FileName="Assets/_Scripts/Enemy.cs" Line="10" Column="6" />
-      <File FileName="Assets/_Scripts/SwitchScene.cs" Line="8" Column="6" />
-      <File FileName="Assets/_Scripts/PlayerSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/Grenade.cs" />
+      <File FileName="Assets/_Scripts/Explosion.cs" />
+      <File FileName="Assets/_Scripts/Enemy.cs" />
+      <File FileName="Assets/_Scripts/SwitchScene.cs" />
+      <File FileName="Assets/_Scripts/PlayerSelect.cs" Line="29" Column="20" />
+      <File FileName="Assets/_Scripts/WeaponSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/LoadPlayer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,7 +21,7 @@
           <Node name="Player" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="_Scripts" expanded="True">
-                <Node name="PlayerSelect.cs" selected="True" />
+                <Node name="LoadPlayer.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -29,7 +31,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a5d5ca71-6636-44db-ae81-c7e7c7a0e3b7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cec128f2-ab99-4140-910b-a6aace60aaaa" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

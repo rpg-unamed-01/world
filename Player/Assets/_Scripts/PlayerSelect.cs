@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerSelect : MonoBehaviour
@@ -29,7 +27,7 @@ public class PlayerSelect : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedPlayer", selectedPlayer);
-        PlayerPrefs.SetInt("selectedWeapon", WeaponSelect.selectedWeapon);
+        PlayerPrefs.SetInt("selectedWeapon", selectedPlayer);
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
     //Set initial shown player

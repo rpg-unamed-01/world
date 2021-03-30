@@ -8,15 +8,8 @@ public class Shoot : MonoBehaviour
     public float grenadeCoolDown = 1;
     private float timer = 0;
 
-    public GameObject[] weapons;
-
+    public KeyCode[] weaponSelect;
     private int currentWeapon = 0;
-    private void Awake()
-    {
-        for (int i = 0; i < weapons.Length; i++) {
-            weapons[i] = Instantiate(weapons[i], weaponHolder);
-        }
-    }
 
     void Update()
     {
@@ -37,23 +30,14 @@ public class Shoot : MonoBehaviour
     }
 
     public void SelectWeapon() {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            currentWeapon = 0;
-            weapons[1].SetActive(false);
-            weapons[2].SetActive(false);
+        int count = 0;
+        foreach (KeyCode key in weaponSelect) {
+            if (Input.GetKeyDown(key)) {
+                weaponHolder.GetChild(currentWeapon).gameObject.SetActive(false);
+                currentWeapon = count;
+                break;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            currentWeapon = 1;
-            weapons[0].SetActive(false);
-            weapons[2].SetActive(false);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            currentWeapon = 2;
-            weapons[0].SetActive(false);
-            weapons[1].SetActive(false);
-        }
-        weapons[currentWeapon].SetActive(true);
+        weaponHolder.GetChild(currentWeapon).gameObject.SetActive(true);
     }
 }
