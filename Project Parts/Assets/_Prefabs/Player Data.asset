@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec50a040975404cfba29982e01b203dc, type: 3}
+  m_Name: Player Data
+  m_EditorClassIdentifier: 
+  level: 0
+  potions:
+  - {fileID: 6839441423646036727, guid: 300c0e0e5c8604b848dc9f79641db453, type: 3}
+  - {fileID: 5168839201704028127, guid: 737efb45f43c84c419778366823a2ba4, type: 3}
+  - {fileID: 7885004991722161398, guid: c666248502ae441f0af918423118fcb3, type: 3}
+  - {fileID: 7185705301580111210, guid: 3b2a0913f76234933a39877686e7ac5a, type: 3}
+  - {fileID: 6577979869296947188, guid: dc50aa4db6aa64e9dbf9697749b754ca, type: 3}
+  player: {fileID: 4276015223001907850, guid: aa751405789464f719a4a61655ac4c24, type: 3}
+  money: 80
+  maxHealth: 150
+  damage: 15
+  items:
+  - SpeedPotion
+  - JumpPotion
+  - 
+  - InvisibilityPotion
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  spawnPoint: {fileID: 2982357954094780081, guid: 8ed72f15d1cec408391b9f96980d86c1,
+    type: 3}
+  currentScene: 

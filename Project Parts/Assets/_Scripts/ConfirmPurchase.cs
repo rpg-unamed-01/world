@@ -17,6 +17,7 @@ public class ConfirmPurchase : MonoBehaviour
             itemHolder.index = index;
         }
 
+        if (player.money < shop.selectedItem.GetComponent<Item>().price) return;
         Purchase(shop.selectedItem, itemHolder.index); 
     }
 

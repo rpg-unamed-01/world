@@ -36,11 +36,9 @@ public class Enemy : MonoBehaviour
     private float escapeCoolDown;
     private float currentHealth;
     // Start is called before the first frame update
-    public virtual void Awake()
+    public virtual void Start()
     {
         currentHealth = health;
-        knight = player.GetComponent<Knight>();
-        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -161,11 +159,12 @@ public class Enemy : MonoBehaviour
 
     public void Die() {
         EscapeGrapple();
+        player.money += 10;
         Destroy(gameObject);
     }
 
     public void SetPlayer(GameObject character) {
-        knight = character.GetComponent<Knight>();
         player = character.GetComponent<PlayerController>();
+        knight = character.GetComponent<Knight>();
     }
 }

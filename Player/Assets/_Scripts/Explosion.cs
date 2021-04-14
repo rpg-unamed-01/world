@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public GameObject player;
+    public LayerMask hittable;
     public float force;
     private Vector3 hitForce;
 
@@ -13,20 +13,22 @@ public class Explosion : MonoBehaviour
         Invoke("EndExplosion", 0.5f);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Awake()
     {
-        if (other.gameObject.layer == player.layer)
-        {
-            float expForce = 0; 
-            Vector3 pos = other.transform.position;
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 2.5f, hittable);
+        foreach (var collider in colliders) {
+            float expForce;
+            Vector3 pos = collider.transform.position;
             Vector3 pos2 = transform.position;
             hitForce = pos - pos2;
             expForce = force / Mathf.Pow(hitForce.magnitude, 2);
-            other.attachedRigidbody.AddForce(hitForce * expForce, ForceMode.Impulse);
+            Debug.Log(hitForce);
+            collider.attachedRigidbody.AddForce(hitForce.normalized * expForce, ForceMode.VelocityChange);
         }
     }
 
-    private void EndExplosion() {
+    private void EndExplosion()
+    {
         Destroy(gameObject);
     }
 }

@@ -1,68 +1,74 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
-{
+{ 
     public bool melee;
     public float damage;
     public float knockback;
     public float range;
-    public float fireRatePerFrame;
+    public float fireRatePerSecond;
     public float totalAmmo;
     public float magazineAmmo;
     public float currentAmmo;
 
-    public LayerMask enemy;
+    public Animator leftArmAnimator;
+    public Animator rightArmAnimator;
+    public Animator animator;
+    public LayerMask enemies;
+    public LayerMask wall;
 
-    public float xPos, yPos, zPos;
-    public float xRotate, yRotate, zRotate;
-    public float xScale = 1, yScale = 1 , zScale = 1;
-
-    private Transform camera;
+    public Transform camera;
     private float coolDown;
 
-    private void Awake()
-    {
-        camera = transform.parent.transform.parent;
-        SetTransform();
-        gameObject.SetActive(false);
-    }
 
-    private void Update()
+    public void Attack(bool stronger, PlayerController player)
     {
-        Shoot();
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Reload();
-        }
-    }
-
-    private void Shoot() {
         if (coolDown <= 0)
         {
             coolDown = 0;
             if (Input.GetMouseButtonDown(0))
             {
+                coolDown = 60/fireRatePerSecond;
                 if (currentAmmo > 0 || melee)
                 {
-                    currentAmmo--;
-                    Debug.Log("hey");
-                    RaycastHit hit;
-                    if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, enemy))
+                    if (melee)
                     {
-                        Debug.Log(hit.transform.name);
-                        coolDown = fireRatePerFrame;
-                        hit.collider.attachedRigidbody.AddForce(camera.transform.forward * knockback, ForceMode.VelocityChange);
-                        hit.transform.gameObject.GetComponent<Enemy>().TakeDamage(damage);
+                        rightArmAnimator.Play("MeleeSwing");
+                    }
+                    else
+                    {
+                        rightArmAnimator.Play("GunShot");
+                    }
+                    currentAmmo--;
+                    RaycastHit hit;
+                    if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, enemies))
+                    {
+                        float hitKnockback = knockback;
+                        if (stronger)
+                        {
+                            hitKnockback *= 2;
+                        }
+                        hit.collider.attachedRigidbody.AddForce(camera.transform.forward * hitKnockback - Vector3.up*hitKnockback*camera.transform.forward.y, ForceMode.VelocityChange);
+                        hit.collider.GetComponentInParent<Enemy>().TakeDamage(damage);
                     }
                 }
             }
         }
-        else {
-            coolDown--;
+        else
+        {
+            coolDown -= 1;
         }
     }
 
-    private void Reload() {
+    public virtual void Special() {
+
+    }
+
+    public virtual void Ability(PlayerController player) { }
+
+    public void Reload()
+    {
         if (!melee)
         {
             float drawAmmo = magazineAmmo - currentAmmo;
@@ -77,11 +83,5 @@ public class Weapon : MonoBehaviour
                 totalAmmo -= drawAmmo;
             }
         }
-    }
-
-    private void SetTransform() {
-        transform.localPosition = new Vector3(xPos,yPos,zPos);
-        transform.localRotation = Quaternion.Euler(xRotate, yRotate, zRotate);
-        transform.localScale = new Vector3(xScale, yScale, zScale);
     }
 }

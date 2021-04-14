@@ -58,6 +58,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9428ccadd814591bdcd57818a54a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potions:
+  - {fileID: 6839441423646036727, guid: 300c0e0e5c8604b848dc9f79641db453, type: 3}
+  - {fileID: 5168839201704028127, guid: 737efb45f43c84c419778366823a2ba4, type: 3}
+  - {fileID: 7885004991722161398, guid: c666248502ae441f0af918423118fcb3, type: 3}
+  - {fileID: 7185705301580111210, guid: 3b2a0913f76234933a39877686e7ac5a, type: 3}
+  - {fileID: 6577979869296947188, guid: dc50aa4db6aa64e9dbf9697749b754ca, type: 3}
   items: []
   currentItem: {fileID: 0}
   holster: {fileID: 0}

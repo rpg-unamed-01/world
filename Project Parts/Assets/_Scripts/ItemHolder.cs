@@ -3,19 +3,14 @@ using UnityEngine.UI;
 
 public class ItemHolder : MonoBehaviour
 {
-    public GameObject[] items;
+    public GameObject[] potions;
+    public GameObject[] items = new GameObject[10];
     public GameObject currentItem;
     public GameObject holster;
     public PlayerController player;
     public int index;
 
     public Text itemName;
-
-    public void Start()
-    {
-        items = new GameObject[10];
-    }
-
     public void AddItem(GameObject item, int i) {
         items[i] = item;
     }
@@ -74,12 +69,39 @@ public class ItemHolder : MonoBehaviour
         {
             RawImage displayItem;
             GameObject itemDisplay = new GameObject();
-            itemDisplay.name = "YO";
             displayItem = itemDisplay.AddComponent<RawImage>();
             displayItem.texture = item.GetComponent<Item>().GetImage();
             itemDisplay.transform.SetParent(parent.transform);
             itemDisplay.transform.localPosition = Vector3.zero;
             itemDisplay.transform.localScale = Vector3.one * 0.2f;
+        }
+    }
+
+    public void ConvertToGameObject(string[] itemNames) {
+        items = new GameObject[10];
+        for (int i = 0; i < 10; i++)
+        {
+                switch (itemNames[i])
+                {
+                    case "HealthPot50":
+                        items[i] = potions[0];
+                        break;
+                    case "InvisibilityPotion":
+                        items[i] = potions[1];
+                        break;
+                    case "JumpPotion":
+                        items[i] = potions[2];
+                        break;
+                    case "SpeedPotion":
+                        items[i] = potions[3];
+                        break;
+                    case "StrengthPotion":
+                        items[i] = potions[4];
+                        break;
+                    default:
+                        items[i] = null;
+                        break;
+            }
         }
     }
 }

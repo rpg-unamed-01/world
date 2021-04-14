@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public PlayerData playerData;
     public bool grounded = false;
     public bool abilityReady;
 
@@ -14,12 +16,13 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 4;
     public float gravity = -15f;
 
-    public KeyCode sprint;
-    public KeyCode perspective;
-    public KeyCode jump;
-    public KeyCode reload;
-    public KeyCode useItem;
-    public KeyCode useAbility;
+    public KeyCode sprint = KeyCode.LeftShift;
+    public KeyCode perspective = KeyCode.F;
+    public KeyCode jump = KeyCode.Space;
+    public KeyCode reload = KeyCode.R;
+    public KeyCode useItem = KeyCode.E;
+    public KeyCode useAbility = KeyCode.C;
+    public KeyCode openMenu = KeyCode.Q;
 
     public float maxHealth = 100;
     public float health;
@@ -29,7 +32,9 @@ public class PlayerController : MonoBehaviour
     public bool displayShop = false;
     public bool displayLevelMenu = false;
     public bool displayMainMenu = false;
-    public bool inLevel = true;
+    public bool levelClearScreen = false;
+    public bool inLevel = false;
+    public bool inGuide = false;
     public bool invisible = false;
     public bool speedier = false;
     public bool jumpier = false;
@@ -60,6 +65,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask ground;
     public LayerMask wall;
     public LayerMask shop;
+    public LayerMask winLayer;
+    public LayerMask guideLayer;
 
     public Animator animator;
 
@@ -79,11 +86,11 @@ public class PlayerController : MonoBehaviour
     private float strengthCoolDown;
     private Vector3 velocityChange;
 
+    public GameObject playerModel;
+    public GameObject playerWeapon;
+
     public virtual void Awake()
     {
-        abilityImage.SetActive(false);
-        //selectedItem = new GameObject();
-        health = maxHealth;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -91,6 +98,16 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inLevel = false;
+        if (playerData.currentScene == "Level1" || playerData.currentScene == "Level2") {
+            inLevel = true;
+        }
+        abilityImage.SetActive(false);
+        items.ConvertToGameObject(playerData.items);
+        money = playerData.money;
+        maxHealth = playerData.maxHealth;
+        myscript.damage = playerData.damage;
+        health = maxHealth;
         myscript = rb.gameObject.GetComponent<Weapon>();
         if (!myscript.melee) {
             ammo.SetActive(true);
@@ -165,9 +182,15 @@ public class PlayerController : MonoBehaviour
         if (totalAmmo != null) totalAmmo.text = "" + myscript.totalAmmo;
 
         CheckShop();
+        CheckLevelClear();
+        CheckGuide();
         ToggleMenu();
         CheckGrounded();
-        if (!displayMenu)
+        if (!grounded)
+        {
+            rb.AddForce(Vector3.up * gravity, ForceMode.Acceleration);
+        }
+        if (!displayMenu && !levelClearScreen && !inGuide)
         {
             if (health > 30) abilityReady = true;
             else if (abilityReady) {
@@ -210,9 +233,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
+    private void CheckLevelClear()
     {
-        Die();
+        if (!displayMenu)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, fistRange, winLayer))
+                {
+                    levelClearScreen = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    hit.collider.gameObject.GetComponent<LevelClear>().Display(this);
+                }
+            }
+        }
+    }
+
+    private void CheckGuide()
+    {
+        if (!displayMenu)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, fistRange, guideLayer))
+                {
+                    inGuide = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    hit.collider.gameObject.GetComponentInParent<Guide>().Display(this);
+                }
+            }
+        }
     }
 
     private void MouseMove() {
@@ -288,8 +342,8 @@ public class PlayerController : MonoBehaviour
             velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
             velocityChange.y = 0;
             CheckWalls();
-            rb.AddForce(velocityChange, ForceMode.VelocityChange);
             Jump();
+            rb.AddForce(velocityChange, ForceMode.VelocityChange);
         }
         else
         {
@@ -302,8 +356,6 @@ public class PlayerController : MonoBehaviour
             CheckWalls();
             rb.AddForce(velocityChange, ForceMode.VelocityChange);
         }
-
-        rb.AddForce(Vector3.up * gravity, ForceMode.Acceleration);
     }
 
     private void CheckWalls() {
@@ -312,12 +364,14 @@ public class PlayerController : MonoBehaviour
         float xDir = velocityChange.x / Mathf.Abs(velocityChange.x);
         if (rb.SweepTest(Vector3.forward * zDir, out hit, rb.transform.localScale.z / 2))
         {
+            if (hit.collider.isTrigger) return;
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0);
             velocityChange.z = 0;
         }
 
         if (rb.SweepTest(Vector3.right * xDir, out hit, rb.transform.localScale.x / 2))
         {
+            if (hit.collider.isTrigger) return;
             rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z);
             velocityChange.x = 0;
         }
@@ -341,7 +395,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(jump))
         {
-            Debug.Log(health);
             float jumpForce = Mathf.Sqrt(2 * jumpHeight * -gravity);
             if (jumpier) {
                 jumpForce *= 2;
@@ -369,13 +422,14 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Die() {
-        
+        playerData.SetPlayerData(money, items.items, maxHealth, myscript.damage);
+        SceneManager.LoadScene(playerData.currentScene, LoadSceneMode.Single);
     }
 
     private void ToggleMenu() {
         //Add raycast check with a shopkeeper prefab to open shop menu
 
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetKeyDown(openMenu) && !inGuide && !levelClearScreen) {
             displayMenu = !displayMenu;
             displayLevelMenu = false;
             displayMainMenu = false;
@@ -459,3 +513,4 @@ public class PlayerController : MonoBehaviour
         slower = true;
     }
 }
+

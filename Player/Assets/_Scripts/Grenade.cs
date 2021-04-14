@@ -2,27 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grenade : MonoBehaviour
+public class Grenade : Projectile
 {
-    public float speed = 100;
-    public LayerMask grenade;
-    public LayerMask explode;
     public GameObject explosion;
 
-    // Update is called once per frame
-
-    void Update()
+    private void Awake()
     {
-        transform.position += transform.forward * speed * Time.deltaTime;
-        checkHit();
+        Invoke("OnHit", 3f);
     }
 
-    void checkHit() {
-        Collider[] groundCollision = Physics.OverlapSphere(transform.position, 0.2f, grenade);
-        if (groundCollision.Length > 0) {
-            GameObject g = Instantiate(explosion, transform.position, Quaternion.identity);
-            g.transform.position = transform.position;
-            Destroy(gameObject);
-        }
+    public override void OnHit() {
+        GameObject g = Instantiate(explosion, transform.position, Quaternion.identity);
+        g.transform.position = transform.position;
+        Destroy(gameObject);
     }
 }

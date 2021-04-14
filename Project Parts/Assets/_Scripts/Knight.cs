@@ -44,7 +44,6 @@ public class Knight : Weapon
             }
             if (currentDistance.magnitude > radius)
             {
-                Debug.Log(currentDistance);
                 leftArmAnimator.Play("PullGrapple");
                 Vector3 force = (currentDistance) - r.velocity;
                 r.AddForce(force, ForceMode.VelocityChange);
@@ -83,7 +82,6 @@ public class Knight : Weapon
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Wall"))
                     {
                         hookedWall = true;
-                        Debug.Log(hookedWall);
                     }
                     else {
                         enemy = hit.collider.GetComponentInParent<Enemy>();
@@ -125,5 +123,12 @@ public class Knight : Weapon
             dist = Vector3.Magnitude(collision.transform.position - transform.position);
             collision.attachedRigidbody.AddForce(Vector3.up*groundPoundForce/dist, ForceMode.VelocityChange);
         }
+    }
+
+    public override string Description()
+    {
+        return "Knight: Sword does 20 damage per swing. \n" +
+               "        Grappling hook stuns grappled enemies and can grapple walls. \n" +
+               "        Ability: Send all nearby enemies airborne";
     }
 }

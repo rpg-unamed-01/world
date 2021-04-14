@@ -84,4 +84,10 @@ public class Weapon : MonoBehaviour
             }
         }
     }
+
+
+    public virtual string Description()
+    {
+        return "";
+    }
 }

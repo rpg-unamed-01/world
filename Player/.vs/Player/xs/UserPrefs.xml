@@ -3,17 +3,15 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/LoadPlayer.cs">
     <Files>
       <File FileName="Assets/Walk.cs" Line="3" Column="1" />
-      <File FileName="Assets/_Scripts/InputController.cs" />
-      <File FileName="Assets/_Scripts/Shoot.cs" />
       <File FileName="Assets/_Scripts/Weapon.cs" />
       <File FileName="Assets/_Scripts/Grenade.cs" />
       <File FileName="Assets/_Scripts/Explosion.cs" />
       <File FileName="Assets/_Scripts/Enemy.cs" />
       <File FileName="Assets/_Scripts/SwitchScene.cs" />
-      <File FileName="Assets/_Scripts/PlayerSelect.cs" Line="29" Column="20" />
-      <File FileName="Assets/_Scripts/WeaponSelect.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/PlayerSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/MainMenu.cs" />
       <File FileName="Assets/_Scripts/LoadPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/PlayerController.cs" Line="473" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,7 +29,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cec128f2-ab99-4140-910b-a6aace60aaaa" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e2686ffb-ca55-4b24-914f-5f68e6f27036" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

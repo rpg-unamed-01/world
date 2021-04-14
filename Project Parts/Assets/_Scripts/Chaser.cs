@@ -12,9 +12,9 @@ public class Chaser : Enemy
 
     private float currentAttackCoolDown;
 
-    public override void Awake()
+    public override void Start()
     {
-        base.Awake();
+        base.Start();
         lightning = GetComponent<LightningBoltScript>();
         lightning.SetEndPoint(player.gameObject);
     }

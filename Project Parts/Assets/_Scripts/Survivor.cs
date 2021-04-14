@@ -30,4 +30,11 @@ public class Survivor : Weapon
         }
         grenadeCurrent -= Time.deltaTime;
     }
+
+    public override string Description()
+    {
+        return "Survivor: Revolver Does 10 damage per shot, 6 bullets per reload. \n" +
+               "          Grenade Launcher deals knockback to player and enemies. \n" +
+               "          Ability: Go invisible for 5 seconds";
+    }
 }

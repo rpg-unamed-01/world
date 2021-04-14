@@ -10,9 +10,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.position);
         transform.position += transform.forward * speed * Time.deltaTime;
-        Debug.Log(" " + transform.position);
         CheckCollision();
     }
 

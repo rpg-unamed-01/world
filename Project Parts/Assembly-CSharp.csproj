@@ -71,15 +71,24 @@
     <Compile Include="Assets\_Scripts\Enemy.cs" />
     <Compile Include="Assets\_Scripts\Explosion.cs" />
     <Compile Include="Assets\_Scripts\Grenade.cs" />
+    <Compile Include="Assets\_Scripts\Guide.cs" />
     <Compile Include="Assets\_Scripts\HealthPotion50.cs" />
+    <Compile Include="Assets\_Scripts\Initiate.cs" />
     <Compile Include="Assets\_Scripts\InterfaceController.cs" />
     <Compile Include="Assets\_Scripts\InvisPotion1.cs" />
     <Compile Include="Assets\_Scripts\Item.cs" />
     <Compile Include="Assets\_Scripts\ItemHolder.cs" />
     <Compile Include="Assets\_Scripts\JumpPotion.cs" />
     <Compile Include="Assets\_Scripts\Knight.cs" />
+    <Compile Include="Assets\_Scripts\LevelClear.cs" />
     <Compile Include="Assets\_Scripts\LightningBoltScript.cs" />
+    <Compile Include="Assets\_Scripts\LoadLevel.cs" />
+    <Compile Include="Assets\_Scripts\LoadLevel1.cs" />
+    <Compile Include="Assets\_Scripts\LoadLevel2.cs" />
+    <Compile Include="Assets\_Scripts\LoadNextScene.cs" />
     <Compile Include="Assets\_Scripts\PlayerController.cs" />
+    <Compile Include="Assets\_Scripts\PlayerData.cs" />
+    <Compile Include="Assets\_Scripts\PlayerSelector.cs" />
     <Compile Include="Assets\_Scripts\Projectile.cs" />
     <Compile Include="Assets\_Scripts\Shooter.cs" />
     <Compile Include="Assets\_Scripts\Shop.cs" />
@@ -91,6 +100,7 @@
     <Compile Include="Assets\_Scripts\TurretBullet.cs" />
     <Compile Include="Assets\_Scripts\Weapon.cs" />
     <None Include="Assets\LightningBolt\Readme.txt" />
+    <None Include="Assets\LowPolyOfficeProps_LITE\About.txt" />
     <None Include="Assets\Turret\Shaders\AlphaTest_Complete.shader" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -621,31 +631,31 @@
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/timofey/Unity/Project Parts/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/timofey/Documents/GitHub/world/Project Parts/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/timofey/Unity/Project Parts/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/timofey/Documents/GitHub/world/Project Parts/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/timofey/Unity/Project Parts/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/timofey/Documents/GitHub/world/Project Parts/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/timofey/Unity/Project Parts/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/timofey/Documents/GitHub/world/Project Parts/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/timofey/Unity/Project Parts/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/timofey/Documents/GitHub/world/Project Parts/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/timofey/Unity/Project Parts/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/timofey/Documents/GitHub/world/Project Parts/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/timofey/Unity/Project Parts/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/timofey/Documents/GitHub/world/Project Parts/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/timofey/Unity/Project Parts/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/timofey/Documents/GitHub/world/Project Parts/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/timofey/Unity/Project Parts/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/timofey/Documents/GitHub/world/Project Parts/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
